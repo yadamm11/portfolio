@@ -22,12 +22,12 @@
 
   /* ---------- Fotos ---------- */
   const gallery = $("#gallery");
-  $("#photoCount").textContent = `${photos.length} ${photos.length === 1 ? "bild" : "bilder"}`;
+  $("#photoCount").textContent = `${photos.length} ${photos.length === 1 ? "Bild" : "Bilder"}`;
   photos.forEach((p, i) => {
     const li = document.createElement("li");
     li.className = "reveal";
     li.innerHTML = `
-      <button class="tile" type="button" aria-label="bild ${i + 1} öffnen: ${escapeHtml(p.title || p.alt || "")}">
+      <button class="tile" type="button" aria-label="Bild ${i + 1} öffnen: ${escapeHtml(p.title || p.alt || "")}">
         <div class="tile__media"><img src="${srcOf(p, 1200)}" ${p.pexels ? `srcset="${srcsetOf(p)}" sizes="(max-width:560px) 92vw, (max-width:1100px) 46vw, 31vw"` : ""} alt="${escapeHtml(p.alt || "")}" loading="lazy" decoding="async"></div>
         ${p.title ? `<div class="tile__caption"><span>${escapeHtml(p.title)}</span><span class="tile__index">${String(i + 1).padStart(2, "0")}</span></div>` : ""}
       </button>`;
@@ -108,14 +108,14 @@
 
   /* ---------- Videos ---------- */
   const list = $("#videoList");
-  $("#videoCount").textContent = `${videos.length} ${videos.length === 1 ? "video" : "videos"}`;
+  $("#videoCount").textContent = `${videos.length} ${videos.length === 1 ? "Video" : "Videos"}`;
   videos.forEach((v) => {
     const id = parseYouTubeId(v.youtube || v.id || "");
     const file = v.file || "";                       // eigenes Video (mp4) statt YouTube
     const poster = v.poster || (id ? `https://i.ytimg.com/vi/${id}/maxresdefault.jpg` : "");
     const li = document.createElement("li");
     li.className = "video reveal";
-    const title = escapeHtml(v.title || "video");
+    const title = escapeHtml(v.title || "Video");
     li.innerHTML = `
       <div class="video__frame">
         ${id || file ? `
@@ -148,7 +148,7 @@
       frame.querySelectorAll("iframe, video").forEach(el => el.remove());
       const box = document.createElement("div");
       box.className = "video__fallback";
-      box.innerHTML = `<p>${msg}</p>${id ? `<a class="video__yt" href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener">auf youtube ansehen<svg class="icon"><use href="#i-arrow-up-right"/></svg></a>` : ""}`;
+      box.innerHTML = `<p>${msg}</p>${id ? `<a class="video__yt" href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener">Auf YouTube ansehen<svg class="icon"><use href="#i-arrow-up-right"/></svg></a>` : ""}`;
       frame.appendChild(box);
     }
 
@@ -163,7 +163,7 @@
           if (v.poster) vid.poster = v.poster;
           vid.setAttribute("controlsList", "nodownload");
           vid.addEventListener("loadeddata", () => vid.classList.add("is-ready"));
-          vid.addEventListener("error", () => showFallback("das video konnte nicht geladen werden."));
+          vid.addEventListener("error", () => showFallback("Das Video konnte nicht geladen werden."));
           frame.appendChild(vid);
           vid.classList.add("is-ready");
           remove();
@@ -172,7 +172,7 @@
 
         // --- YouTube-Player auf der eigenen Seite
         if (location.protocol === "file:") {
-          showFallback("lokal geöffnet: youtube braucht eine echte webadresse. auf dem webspace läuft das video direkt hier.");
+          showFallback("Lokal geöffnet: YouTube braucht eine echte Webadresse. Auf deinem Webspace läuft das Video direkt hier.");
           remove();
           return;
         }
@@ -182,7 +182,7 @@
         });
         const iframe = document.createElement("iframe");
         iframe.src = `https://www.youtube.com/embed/${id}?${params}`;
-        iframe.title = v.title || "youtube-video";
+        iframe.title = v.title || "YouTube-Video";
         iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen";
         iframe.referrerPolicy = "strict-origin-when-cross-origin";
         iframe.allowFullscreen = true;
@@ -200,7 +200,7 @@
           let d; try { d = typeof ev.data === "string" ? JSON.parse(ev.data) : ev.data; } catch (_) { return; }
           if (d && d.event === "onError") {
             window.removeEventListener("message", onMsg);
-            showFallback("dieses video erlaubt das einbetten nicht.");
+            showFallback("Dieses Video erlaubt das Einbetten nicht.");
           }
         };
         window.addEventListener("message", onMsg);
@@ -214,7 +214,7 @@
   $$('[data-view="kontakt"] .reveal').forEach(observe);
 
   /* ---------- Router (sanfter Seitenwechsel) ---------- */
-  const titles = { fotos: "fotos", videos: "videos", kontakt: "kontakt" };
+  const titles = { fotos: "Fotos", videos: "Videos", kontakt: "Kontakt" };
   let active = null, routing = Promise.resolve();
 
   function route(first = false) {
@@ -227,7 +227,7 @@
     const next = $(`.view[data-view="${name}"]`);
     const prev = active ? $(`.view[data-view="${active}"]`) : null;
     $$("[data-route]").forEach(a => a.dataset.route === name ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current"));
-    document.title = `${titles[name]} – yanic dammann`;
+    document.title = `${titles[name]} – Yanic Dammann`;
     if (prev && !first) { prev.classList.add("is-leaving"); await wait(220); prev.hidden = true; prev.classList.remove("is-leaving"); }
     $$(".view").forEach(v => { if (v !== next) v.hidden = true; });
     next.classList.add("is-entering"); next.hidden = false;
