@@ -113,19 +113,24 @@ main{ padding-top:var(--nav-h); min-height:100vh; outline:none; }
 .reveal{ opacity:0; transform:translateY(14px); transition:opacity var(--t-slow) var(--ease), transform var(--t-slow) var(--ease); }
 .reveal.is-visible{ opacity:1; transform:none; }
 
-/* ---------- Fotos ---------- */
+/* ---------- Fotos ----------
+   Galerie so breit wie der übrige Seiteninhalt, ohne Abstände.
+   Die Bilder behalten ihr eigenes Format (Hoch-, Quer-, Panorama)
+   und werden in Spalten gesetzt (Masonry-Prinzip). */
 .gallery{
-  display:grid; grid-template-columns:repeat(3,minmax(0,1fr));
-  column-gap:clamp(20px,3.2vw,56px); row-gap:clamp(40px,5vw,88px);
+  column-count:3; column-gap:0;
 }
-@media (max-width: 1100px){ .gallery{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
-@media (max-width: 560px){ .gallery{ grid-template-columns:1fr; } }
+@media (min-width: 1800px){ .gallery{ column-count:4; } }
+@media (max-width: 1100px){ .gallery{ column-count:2; } }
+@media (max-width: 560px){ .gallery{ column-count:1; } }
+
+.gallery li{ break-inside:avoid; -webkit-column-break-inside:avoid; page-break-inside:avoid; margin:0; }
 
 .tile{ display:block; width:100%; text-align:left; }
-.tile__media{ position:relative; overflow:hidden; aspect-ratio:4/5; background:var(--tint); }
-.tile__media img{ width:100%; height:100%; object-fit:cover; transition:transform var(--t-slow) var(--ease), opacity var(--t-slow) var(--ease); }
+.tile__media{ position:relative; overflow:hidden; aspect-ratio:auto; background:var(--tint); font-size:0; }
+.tile__media img{ width:100%; height:auto; object-fit:cover; transition:transform var(--t-slow) var(--ease), opacity var(--t-slow) var(--ease); }
 .tile:hover .tile__media img{ transform:scale(1.03); }
-.tile__caption{ display:flex; justify-content:space-between; gap:16px; margin-top:14px; font-size:.875rem; color:var(--ink-2); transition:color var(--t-fast) var(--ease); }
+.tile__caption{ display:flex; justify-content:space-between; gap:16px; padding:10px 0 18px; font-size:.875rem; color:var(--ink-2); transition:color var(--t-fast) var(--ease); }
 .tile:hover .tile__caption{ color:var(--accent); }
 .tile__index{ font-variant-numeric:tabular-nums; }
 .gallery li:nth-child(3n+2){ transition-delay:60ms; }
