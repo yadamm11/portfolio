@@ -46,7 +46,7 @@ h1,h2,p,figure{ margin:0; }
 .site-header{
   position:fixed; inset:0 0 auto 0; z-index:40; height:var(--nav-h);
   background:rgba(255,255,255,.88); backdrop-filter:saturate(180%) blur(14px); -webkit-backdrop-filter:saturate(180%) blur(14px);
-  border-bottom:0px solid transparent; transition:border-color var(--t) var(--ease);
+  border-bottom:1px solid transparent; transition:border-color var(--t) var(--ease);
 }
 .site-header.is-scrolled{ border-bottom-color:var(--line); }
 .nav{
@@ -100,7 +100,6 @@ main{ padding-top:var(--nav-h); min-height:100vh; outline:none; }
 .page-head{
   display:flex; align-items:flex-end; justify-content:space-between; gap:24px;
   padding:clamp(48px,9vw,128px) 0 clamp(20px,2.5vw,32px);
-  margin-bottom:clamp(40px,6vw,88px); border-bottom:1px solid var(--line);
 }
 .page-head h1{ font-size:clamp(2.5rem,7.5vw,6rem); font-weight:700; line-height:.98; letter-spacing:-.035em; }
 .page-head__meta{ color:var(--ink-2); font-size:.9375rem; padding-bottom:.4em; white-space:nowrap; }
