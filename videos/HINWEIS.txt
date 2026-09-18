@@ -1,0 +1,3 @@
+Hier kannst du eigene Videodateien (z. B. film.mp4) ablegen.
+In data.js dann eintragen:
+  { file: "videos/film.mp4", poster: "images/film.jpg", title: "titel", info: "imagefilm, 2025" }

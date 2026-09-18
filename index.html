@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>yanic dammann – fotografie & video</title>
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Portfolio von Yanic Dammann: Fotografie und Video.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://images.pexels.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Zum Inhalt springen</a>
+
+  <!-- SVG-Icons im SF-Symbols-Stil -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="M15 4.5 7.5 12 15 19.5"/></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="M9 4.5 16.5 12 9 19.5"/></symbol>
+    <symbol id="i-xmark" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 9h16M4 15h16"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8.5 5.8v12.4a.7.7 0 0 0 1.05.6l10-6.2a.7.7 0 0 0 0-1.2l-10-6.2a.7.7 0 0 0-1.05.6z"/></symbol>
+    <symbol id="i-envelope" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".6"/></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5"/><path d="m10 9.2 5 2.8-5 2.8z"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></symbol>
+  </svg>
+
+  <header class="site-header" id="header">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <ul class="nav__links nav__links--left">
+        <li><a href="#fotos" data-route="fotos">Fotos</a></li>
+        <li><a href="#videos" data-route="videos">Videos</a></li>
+      </ul>
+      <a class="nav__logo" href="#fotos" aria-label="Yanic Dammann – Startseite">
+        <img src="assets/logo.png" alt="Yanic Dammann" width="411" height="88">
+      </a>
+      <ul class="nav__links nav__links--right">
+        <li><a href="#kontakt" data-route="kontakt">Kontakt</a></li>
+      </ul>
+      <button class="icon-btn nav__toggle" id="menuToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu">
+        <svg class="icon"><use href="#i-menu"/></svg>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <ul>
+        <li><a href="#fotos" data-route="fotos">Fotos</a></li>
+        <li><a href="#videos" data-route="videos">Videos</a></li>
+        <li><a href="#kontakt" data-route="kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- FOTOS -->
+    <section class="view" data-view="fotos" aria-labelledby="h-fotos">
+      <header class="page-head">
+        <h1 id="h-fotos">Fotos</h1>
+        <p class="page-head__meta" id="photoCount"></p>
+      </header>
+      <ul class="gallery" id="gallery"></ul>
+    </section>
+
+    <!-- VIDEOS -->
+    <section class="view" data-view="videos" aria-labelledby="h-videos" hidden>
+      <header class="page-head">
+        <h1 id="h-videos">Videos</h1>
+        <p class="page-head__meta" id="videoCount"></p>
+      </header>
+      <ul class="video-list" id="videoList"></ul>
+    </section>
+
+    <!-- KONTAKT -->
+    <section class="view" data-view="kontakt" aria-labelledby="h-kontakt" hidden>
+      <header class="page-head">
+        <h1 id="h-kontakt">Kontakt</h1>
+      </header>
+      <div class="about">
+        <figure class="about__portrait reveal">
+          <img src="images/portrait.jpg" alt="Porträt von Yanic Dammann (Platzhalter)" width="1000" height="1250" loading="lazy">
+        </figure>
+        <div class="about__text">
+          <p class="about__lead reveal">Ich bin Yanic Dammann, Fotograf und Videograf. Ich erzähle Geschichten in ruhigen Bildern – für Marken, Menschen und Orte.</p>
+          <p class="reveal">Hier steht ein kurzer Absatz über dich: wie du zur Fotografie gekommen bist, woran du gerne arbeitest und was deine Bilder ausmacht. Zwei bis drei Sätze reichen.</p>
+
+          <h2 class="about__sub reveal">Stationen</h2>
+          <ol class="timeline reveal">
+            <li><span class="timeline__year">seit 2024</span><span>Selbstständig – Fotografie & Video</span></li>
+            <li><span class="timeline__year">2021–2024</span><span>Position, Firma / Agentur</span></li>
+            <li><span class="timeline__year">2018–2021</span><span>Ausbildung oder Studium, Schule</span></li>
+          </ol>
+
+          <h2 class="about__sub reveal">Schreib mir</h2>
+          <ul class="contact-links reveal">
+            <li><a href="mailto:hallo@example.com"><svg class="icon"><use href="#i-envelope"/></svg><span>hallo@example.com</span></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener"><svg class="icon"><use href="#i-camera"/></svg><span>Instagram</span></a></li>
+            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener"><svg class="icon"><use href="#i-video"/></svg><span>YouTube</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Yanic Dammann</p>
+    <button class="to-top" id="toTop"><span>Nach oben</span><svg class="icon"><use href="#i-arrow-up"/></svg></button>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Bildansicht" hidden>
+    <button class="icon-btn lb-btn lb-close" id="lbClose" aria-label="Schliessen"><svg class="icon"><use href="#i-xmark"/></svg></button>
+    <button class="icon-btn lb-btn lb-prev" id="lbPrev" aria-label="Vorheriges Bild"><svg class="icon"><use href="#i-chevron-left"/></svg></button>
+    <figure class="lb-figure">
+      <img id="lbImg" alt="">
+      <figcaption id="lbCaption"></figcaption>
+    </figure>
+    <button class="icon-btn lb-btn lb-next" id="lbNext" aria-label="Nächstes Bild"><svg class="icon"><use href="#i-chevron-right"/></svg></button>
+    <p class="lb-counter" id="lbCounter" aria-live="polite"></p>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
