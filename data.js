@@ -45,15 +45,15 @@ const PHOTOS = [
   { pexels: "34274110", alt: "Alpenlandschaft in Warth, Österreich" },
   { pexels: "34274109", alt: "Hängebrücke im Bergwald" },
   { pexels: "34274108", alt: "Paragliding in den Bergen" },
-  { pexels: "34274099", alt: "Berghütte in den österreichischen Alpen" },
+  { pexels: "34274099", alt: "Berghütte in den Österreichischen Alpen" },
   { pexels: "34274097", alt: "Nebelige Alpenlandschaft in Österreich" }
 ];
 
 const VIDEOS = [
   { youtube: "https://youtu.be/zdBmfzcP9TU", title: "Chase your Dreams / Nike Spec Ad", info: "" },
-  { youtube: "https://youtu.be/_HlArkwMVIY", title: "KPMG Event Video", info: "" },
+  { youtube: "https://youtu.be/_HlArkwMVIY", title: "KPMG Tax Event Video", info: "" },
   { youtube: "https://youtu.be/oazCLC_1CQA", title: "Summit Wander Cinematic Short", info: "" },
-  { youtube: "https://youtu.be/bLIdyrXrXRo", title: "Iceland Reise Recap ", info: "" },
-  { youtube: "https://youtu.be/jPHh7lrLre4", title: "Nüresndorf Vintage Video", info: "" },
+  { youtube: "https://youtu.be/bLIdyrXrXRo", title: "Island Reise Recap ", info: "" },
+  { youtube: "https://youtu.be/jPHh7lrLre4", title: "Nürensdorf Vintage Video", info: "" },
   { youtube: "https://youtu.be/lwT6IzGVAms", title: "Uhren Spec Ad", info: "" }
 ];
