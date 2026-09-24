@@ -55,6 +55,6 @@ const VIDEOS = [
   { youtube: "https://youtu.be/oazCLC_1CQA", title: "Summit Wander Cinematic Short", info: "" },
   { youtube: "https://youtu.be/bLIdyrXrXRo", title: "Island Reise Recap ", info: "" },
   { youtube: "https://youtu.be/zscj9zY5Bh0", title: "SwissVR / KPMG Event Video ", info: "" },
-  { youtube: "https://youtu.be/jPHh7lrLre4", title: "Nürensdorf Vintage Video", info: "" },
+  { youtube: "https://youtu.be/jPHh7lrLre4", title: "Nürensdorf", info: "" },
   { youtube: "https://youtu.be/lwT6IzGVAms", title: "Uhren Spec Ad", info: "" }
 ];
