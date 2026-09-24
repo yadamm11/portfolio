@@ -134,11 +134,13 @@
 
     if (id && !file && poster.includes("ytimg")) {
       const img = li.querySelector("img");
-      img.addEventListener("error", function onErr() {
-        // maxresdefault gibt es nicht bei jedem Video -> hqdefault als Rückfall
+      const useFallback = () => {
         if (!img.dataset.fallback) { img.dataset.fallback = "1"; img.src = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`; }
-        else { img.style.visibility = "hidden"; img.removeEventListener("error", onErr); }
-      });
+        else { img.style.visibility = "hidden"; }
+      };
+      img.addEventListener("error", useFallback);
+      // Fehlt das grosse Bild, schickt YouTube statt eines Fehlers ein graues 120×90-Bild
+      img.addEventListener("load", () => { if (img.naturalWidth <= 120) useFallback(); });
     }
 
     // Fällt das Abspielen auf der Seite aus (z. B. Einbetten im Video deaktiviert),
