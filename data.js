@@ -50,10 +50,11 @@ const PHOTOS = [
 ];
 
 const VIDEOS = [
-  { youtube: "https://youtu.be/zdBmfzcP9TU", title: "Chase your Dreams / Nike Spec Ad", info: "" },
-  { youtube: "https://youtu.be/_HlArkwMVIY", title: "KPMG Tax Event Video", info: "" },
+  { youtube: "https://youtu.be/zdBmfzcP9TU", title: "Chase your Dreams / Nike Spec Ad", info: "" }, 
+  { youtube: "https://youtu.be/_HlArkwMVIY", title: "KPMG Event Video", info: "" },
   { youtube: "https://youtu.be/oazCLC_1CQA", title: "Summit Wander Cinematic Short", info: "" },
   { youtube: "https://youtu.be/bLIdyrXrXRo", title: "Island Reise Recap ", info: "" },
+  { youtube: "https://youtu.be/zscj9zY5Bh0", title: "SwissVR / KPMG Event Video ", info: "" },
   { youtube: "https://youtu.be/jPHh7lrLre4", title: "Nürensdorf Vintage Video", info: "" },
   { youtube: "https://youtu.be/lwT6IzGVAms", title: "Uhren Spec Ad", info: "" }
 ];
