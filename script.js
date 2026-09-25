@@ -216,7 +216,7 @@
   $$('[data-view="kontakt"] .reveal').forEach(observe);
 
   /* ---------- Router (sanfter Seitenwechsel) ---------- */
-  const titles = { fotos: "Fotos", videos: "Videos", kontakt: "Kontakt" };
+  const titles = { fotos: "Fotos", videos: "Videos", kontakt: "Wer bin ich?" };
   let active = null, routing = Promise.resolve();
 
   function route(first = false) {
