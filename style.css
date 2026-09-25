@@ -101,7 +101,7 @@ main{ padding-top:var(--nav-h); min-height:100vh; outline:none; }
   display:flex; align-items:flex-end; justify-content:space-between; gap:24px;
   padding:clamp(48px,9vw,128px) 0 clamp(20px,2.5vw,32px);
 }
-.page-head h1{ font-size:clamp(2.5rem,7.5vw,6rem); font-weight:700; line-height:.98; letter-spacing:-.035em; }
+.page-head h1{ font-size:clamp(4rem,10vw,8rem); font-weight:700; line-height:.98; letter-spacing:-.035em; }
 .page-head__meta{ color:var(--ink-2); font-size:.9375rem; padding-bottom:.4em; white-space:nowrap; }
 
 /* ---------- Titel ---------- */
