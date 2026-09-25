@@ -6,7 +6,7 @@
   --ink-2:#5c5c5c;        /* Sekundärtext */
   --line:#e7e7e7;         /* Haarlinien */
   --tint:#f3f3f2;         /* Flächen / Platzhalter */
-  --accent:#000566;       /* Akzent: tiefes Blau */
+  --accent:#545454;       /* Akzent: tiefes Blau */
   --accent-soft:rgba(0,5,102,.08);
 
   --font:"Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
