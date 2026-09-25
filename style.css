@@ -87,6 +87,7 @@ h1,h2,p,figure{ margin:0; }
   .nav__logo img{ height:28px; }
   .nav__toggle{ display:inline-grid; grid-column:3; justify-self:end; margin-right:-10px; }
   .nav__toggle:hover{ background:var(--accent-soft); color:var(--accent); }
+  .page-head h1{ min-width:0; max-width:100%; font-size:min(clamp(1.75rem,10vw,6rem), calc((100vw - (2 * var(--pad))) / 8)); overflow-wrap:break-word; }
 }
 body.menu-open{ overflow:hidden; }
 
