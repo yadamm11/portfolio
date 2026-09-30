@@ -102,7 +102,7 @@ main{ padding-top:var(--nav-h); min-height:100vh; outline:none; }
   display:flex; align-items:flex-end; justify-content:space-between; gap:24px;
   padding:clamp(48px,4vw,128px) 0 clamp(20px,3vw,32px);
 }
-.page-head h1{ font-size:clamp(4rem,20vw,16rem); font-weight:700; line-height:.98; letter-spacing:-.035em; overflow-wrap:normal; word-break:normal; hyphens:none; }
+.page-head h1{ font-size:clamp(4rem,20vw,10rem); font-weight:700; line-height:.98; letter-spacing:-.035em; overflow-wrap:normal; word-break:normal; hyphens:none; }
 .page-head__meta{ color:var(--ink-2); font-size:.9375rem; padding-bottom:.4em; white-space:nowrap; }
 
 /* ---------- Titel ---------- */
