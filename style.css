@@ -45,15 +45,8 @@ h1,h2,p,figure{ margin:0; }
 /* ---------- Navigation ---------- */
 .site-header{
   position:fixed; inset:0 0 auto 0; z-index:40; height:var(--nav-h);
-  background:rgba(255,255,255,.70); backdrop-filter:saturate(180%) blur(14px); -webkit-backdrop-filter:saturate(180%) blur(14px);
-  border-bottom:1px solid transparent; transition:border-color var(--t) var(--ease);
-}
-.site-header::after{
-  content:""; position:absolute; left:0; right:0; bottom:-9px; height:10px; pointer-events:none;
-  background:linear-gradient(to bottom, rgba(255,255,255,.28), rgba(255,255,255,0));
-  backdrop-filter:saturate(180%) blur(10px); -webkit-backdrop-filter:saturate(180%) blur(10px);
-  mask-image:linear-gradient(to bottom, #000 0%, transparent 100%);
-  -webkit-mask-image:linear-gradient(to bottom, #000 0%, transparent 100%);
+  background:rgba(255,255,255,.80); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
 }
 .site-header.is-scrolled{ border-bottom-color:var(--line); }
 .nav{
@@ -94,7 +87,7 @@ h1,h2,p,figure{ margin:0; }
   .nav__logo img{ height:28px; }
   .nav__toggle{ display:inline-grid; grid-column:3; justify-self:end; margin-right:-10px; }
   .nav__toggle:hover{ background:var(--accent-soft); color:var(--accent); }
-  .page-head h1{ min-width:0; max-width:100%; font-size:min(clamp(1.75rem,5vw,6rem), calc((100vw - (2 * var(--pad))) / 8)); white-space:nowrap; }
+  .page-head h1{ min-width:0; max-width:100%; white-space:nowrap; }
 }
 body.menu-open{ overflow:hidden; }
 
@@ -109,7 +102,7 @@ main{ padding-top:var(--nav-h); min-height:100vh; outline:none; }
   display:flex; align-items:flex-end; justify-content:space-between; gap:24px;
   padding:clamp(48px,4vw,128px) 0 clamp(20px,3vw,32px);
 }
-.page-head h1{ font-size:clamp(11rem,10vw,8rem); font-weight:700; line-height:.98; letter-spacing:-.035em; }
+.page-head h1{ font-size:clamp(2rem,10vw,8rem); font-weight:700; line-height:.98; letter-spacing:-.035em; }
 .page-head__meta{ color:var(--ink-2); font-size:.9375rem; padding-bottom:.4em; white-space:nowrap; }
 
 /* ---------- Titel ---------- */
@@ -211,7 +204,7 @@ main{ padding-top:var(--nav-h); min-height:100vh; outline:none; }
 
 /* ---------- Kontakt ---------- */
 .about{ display:grid; grid-template-columns:minmax(0,5fr) minmax(0,6fr); gap:clamp(40px,7vw,120px); align-items:start; }
-.about__portrait{ position:sticky; top:calc(var(--nav-h) + 32px); aspect-ratio:4/5; overflow:hidden; background:var(--tint); }
+.about__portrait{ aspect-ratio:4/5; overflow:hidden; background:var(--tint); }
 .about__portrait img{ width:100%; height:100%; object-fit:cover; }
 .about__text{ max-width:36rem; color:var(--ink-2); }
 .about__text > p + p{ margin-top:1.1em; }
